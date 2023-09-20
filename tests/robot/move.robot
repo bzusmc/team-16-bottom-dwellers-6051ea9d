@@ -9,6 +9,7 @@ Move on the edge of the board       0             0             5               
 
 
 *** Keywords ***
+<<<<<<< HEAD
 Move character
     [Arguments]    ${startingX}    ${startingY}    ${startingMoveCount}    ${direction}    ${endingX}    ${endingY}    ${endingMoveCount}
     Initialize character xposition with  ${startingX}
@@ -18,3 +19,22 @@ Move character
     Character xposition should be        ${endingX}
     Character yposition should be        ${endingY}
     Character moveCount should be        ${endingMoveCount}
+=======
+Move Character  
+    [Arguments]     ${startingX}    ${startingY}    ${direction}    ${endingX}      ${endingY}
+    Intitialize character xposition with    ${startingX}
+    Intitialize character yposition with    ${startingY}
+    Move in direction                       ${direction}
+    Character xposition should be           ${endingX}
+    Character yposition should be           ${endingY}
+
+
+*** Settings ***
+Documentation
+...         Example test case using the data-driven (table) syntax.
+...        http://arcbotics.com/wp-content/uploads/2015/12/sparki-driver-icon.png
+...
+
+
+
+>>>>>>> 14b7b0a (New Files)
