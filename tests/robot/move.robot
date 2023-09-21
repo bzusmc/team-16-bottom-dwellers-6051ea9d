@@ -4,12 +4,12 @@ Test Template     Move character
 Library           MoveLibrary.py
 
 *** Test Cases ***                  StartingX     StartingY     StartingMoveCount     Direction     EndingX     EndingY     EndingMoveCount
-Move in the middle of the board     0             0             1                     NORTH         0           1           2
+Move in the middle of the board     3             2             1                     NORTH         3           3           2
+Move from corner                    0             0             3                     NORTH         0           1           4
 Move on the edge of the board       0             0             5                     SOUTH         0           0           6
 
 
 *** Keywords ***
-<<<<<<< HEAD
 Move character
     [Arguments]    ${startingX}    ${startingY}    ${startingMoveCount}    ${direction}    ${endingX}    ${endingY}    ${endingMoveCount}
     Initialize character xposition with  ${startingX}
@@ -19,21 +19,3 @@ Move character
     Character xposition should be        ${endingX}
     Character yposition should be        ${endingY}
     Character moveCount should be        ${endingMoveCount}
-=======
-Move Character  
-    [Arguments]     ${startingX}    ${startingY}    ${direction}    ${endingX}      ${endingY}
-    Intitialize character xposition with    ${startingX}
-    Intitialize character yposition with    ${startingY}
-    Move in direction                       ${direction}
-    Character xposition should be           ${endingX}
-    Character yposition should be           ${endingY}
-
-
-*** Settings ***
-...         Example test case using the data-driven (table) syntax.
-...        http://arcbotics.com/wp-content/uploads/2015/12/sparki-driver-icon.png
-...
-
-
-
->>>>>>> 14b7b0a (New Files)
