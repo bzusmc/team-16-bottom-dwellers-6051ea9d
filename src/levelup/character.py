@@ -1,4 +1,4 @@
-
+# Some changes
 from levelup.position import Position
 from levelup.direction import Direction
 from levelup.map import Map
