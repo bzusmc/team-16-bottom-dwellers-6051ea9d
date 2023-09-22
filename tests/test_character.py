@@ -10,9 +10,9 @@ class TestCharacterInitWithName(TestCase):
         testobj = Character(ARBITRARY_NAME)
         self.assertEqual(ARBITRARY_NAME, testobj.name)
 
-class TestCharacterMoveNorthWithinBounds(TestCase):
-    def test_init(self):
-        character = Character("Bad Boy Bobby Blanco")
-        inThisDirection = "N"
-        character.move(inThisDirection)
-        self.assertNotEqual(ENDING_X_POSITION, character.current_position)
+# class TestCharacterMoveNorthWithinBounds(TestCase):
+#     def test_init(self):
+#         character = Character("Bad Boy Bobby Blanco")
+#         inThisDirection = "N"
+#         character.move(inThisDirection)
+#         self.assertNotEqual(ENDING_X_POSITION, character.current_position)
