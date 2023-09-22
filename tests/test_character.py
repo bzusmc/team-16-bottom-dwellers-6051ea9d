@@ -1,5 +1,8 @@
 from unittest import TestCase
 from levelup.character import Character
+from levelup.position import Position
+from levelup.direction import Direction
+from levelup.map import Map
 
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
@@ -9,14 +12,7 @@ class TestCharacterInitWithName(TestCase):
 
 class TestCharacterMoveNorthWithinBounds(TestCase):
     def test_init(self):
-        STARTING_X_POSITION = 0
-        STARTING_Y_POSITION = 1
-        _from = STARTING_X_POSITION
-        _here = STARTING_Y_POSITION
-        _toThere = "north"
-        character = Character("Bad Boy Billy Blanco")
-        character.move(_from, _here, _toThere)
-        ENDING_X_POSITION = 0
-        ENDING_Y_POSITION = 0
-        self.assertEqual(ENDING_X_POSITION, character.xPosition)
-        self.assertEqual(ENDING_Y_POSITION, character.yPosition)
+        character = Character("Bad Boy Bobby Blanco")
+        inThisDirection = "N"
+        character.move(inThisDirection)
+        self.assertNotEqual(ENDING_X_POSITION, character.current_position)
