@@ -5,7 +5,7 @@ from levelup.map import Map
 
 class Character:
     name = ""
-    current_position :Position = Position(-100,-100)
+    current_position :Position = Position(-10,-10)
     map :Map = Map()
 
     def __init__(self, character_name):
