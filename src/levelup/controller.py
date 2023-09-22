@@ -9,7 +9,7 @@ DEFAULT_CHARACTER_NAME = "Character"
 class GameStatus:
     running: bool = False
     character_name: str = DEFAULT_CHARACTER_NAME
-    current_position: tuple = (-100,-100)
+    current_position: tuple = (-10,-10)
     move_count: int = 0
 
     def __str__(self) -> str:
